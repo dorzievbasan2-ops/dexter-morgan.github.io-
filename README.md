@@ -1,2 +1,367 @@
-# dexter-morgan.github.io-
-My first project on GitHub
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Руководство по HTML5 и CSS3 (Metanit) - Полный Курс</title>
+    <style>
+        /* ОСНОВНЫЕ СТИЛИ */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        /* СОДЕРЖАНИЕ (НАВИГАЦИЯ) */
+        nav#toc {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        nav#toc ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav#toc li {
+            width: 30%; /* Для организации 3 колонки */
+        }
+
+        nav#toc a {
+            display: block;
+            padding: 8px 10px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        nav#toc a:hover {
+            background-color: #e9f0ff;
+            color: #0056b3;
+        }
+
+        /* КОНТЕНТ ГЛАВЫ */
+        main section {
+            background: #fff;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        section h2 {
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        section h3 {
+            color: #333;
+            margin-top: 20px;
+            border-left: 5px solid #ffc107;
+            padding-left: 10px;
+        }
+
+        /* СТИЛИ ДЛЯ КОДА */
+        code {
+            background: #fff2e6;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.9em;
+            color: #d9534f;
+        }
+
+        pre {
+            background: #272822; /* Темный фон для блока кода */
+            color: #f8f8f2;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        
+        /* Стили для ссылок на верх */
+        .back-to-top {
+            display: block;
+            text-align: right;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📖 Руководство по HTML5 и CSS3</h1>
+        <p>Полный курс по материалам Metanit.com</p>
+    </header>
+
+    <div class="container">
+        
+        <nav id="toc">
+            <h2>Содержание Курса (13 Глав)</h2>
+            <ul>
+                <li><a href="#glava1">1. Введение в HTML5</a></li>
+                <li><a href="#glava2">2. Базовые Элементы HTML5</a></li>
+                <li><a href="#glava3">3. Работа с Формами</a></li>
+                <li><a href="#glava4">4. Семантическая Структура</a></li>
+                <li><a href="#glava5">5. Мультимедиа и Canvas</a></li>
+                <li><a href="#glava6">6. Основы CSS3</a></li>
+                <li><a href="#glava7">7. Разновидности Селекторов</a></li>
+                <li><a href="#glava8">8. Оформление Текста</a></li>
+                <li><a href="#glava9">9. Блочная Модель</a></li>
+                <li><a href="#glava10">10. Позиционирование и Дисплей</a></li>
+                <li><a href="#glava11">11. Flexbox</a></li>
+                <li><a href="#glava12">12. CSS Grid Layout</a></li>
+                <li><a href="#glava13">13. Адаптивность и Анимации</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="glava1">
+                <h2>Глава 1. Введение в HTML5</h2>
+                
+                <h3>Что такое HTML и Базовая структура</h3>
+                <p>HTML (HyperText Markup Language) — это язык разметки, который используется для создания структуры веб-страницы. Он состоит из элементов (тегов), которые определяют, как содержимое должно отображаться в браузере. Базовая структура включает декларацию <code>&lt;!DOCTYPE html&gt;</code>, элемент <code>&lt;html&gt;</code> и его дочерние элементы <code>&lt;head&gt;</code> и <code>&lt;body&gt;</code>.</p>
+                <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Заголовок страницы&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привет, мир!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+
+            <section id="glava2">
+                <h2>Глава 2. Базовые Элементы HTML5</h2>
+                
+                <h3>Элементы head и body</h3>
+                <p>Элемент <code>&lt;head&gt;</code> содержит метаданные (информацию для браузеров и поисковых систем), а <code>&lt;body&gt;</code> — видимое содержимое страницы.</p>
+                
+                <h3>Работа с изображениями и ссылками</h3>
+                <p>Изображения вставляются с помощью <code>&lt;img&gt;</code> (самозакрывающийся тег) с атрибутами <code>src</code> (путь к файлу) и <code>alt</code> (альтернативный текст). Ссылки создаются тегом <code>&lt;a&gt;</code> с атрибутом <code>href</code>.</p>
+                <pre><code>
+&lt;a href="https://metanit.com"&gt;Перейти на Metanit&lt;/a&gt;
+&lt;img src="path/to/image.jpg" alt="Описание изображения"&gt;
+                </code></pre>
+
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+
+            <section id="glava3">
+                <h2>Глава 3. Работа с Формами</h2>
+                
+                <h3>Тег form и Элементы input</h3>
+                <p>Формы создаются тегом <code>&lt;form&gt;</code>. Самый распространенный элемент — <code>&lt;input&gt;</code>, чей тип задается атрибутом <code>type</code>: <code>text</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>, <code>submit</code> (кнопка отправки).</p>
+                
+                <h3>Новые типы ввода HTML5</h3>
+                <p>HTML5 добавил полезные типы: <code>email</code>, <code>url</code>, <code>number</code>, <code>range</code>, <code>date</code> и <code>color</code>.</p>
+                
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+
+            <section id="glava4">
+                <h2>Глава 4. Семантическая Структура HTML5</h2>
+                
+                <h3>Структурные элементы</h3>
+                <p>Семантические элементы помогают поисковым системам и вспомогательным технологиям понять назначение частей страницы. Основные:</p>
+                <ul>
+                    <li><code>&lt;header&gt;</code>: шапка сайта или раздела.</li>
+                    <li><code>&lt;nav&gt;</code>: основная навигация.</li>
+                    <li><code>&lt;main&gt;</code>: основной контент страницы.</li>
+                    <li><code>&lt;article&gt;</code>: независимый, самодостаточный контент (пост, новость).</li>
+                    <li><code>&lt;section&gt;</code>: тематический раздел.</li>
+                    <li><code>&lt;aside&gt;</code>: контент, косвенно связанный с основным (сайдбар).</li>
+                    <li><code>&lt;footer&gt;</code>: подвал сайта или раздела.</li>
+                </ul>
+                
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+            
+            <section id="glava5">
+                <h2>Глава 5. Мультимедиа и Canvas</h2>
+                
+                <h3>Аудио и Видео</h3>
+                <p>Теги <code>&lt;audio&gt;</code> и <code>&lt;video&gt;</code> позволяют встраивать медиа без сторонних плагинов. Атрибут <code>controls</code> добавляет стандартные элементы управления.</p>
+                <pre><code>
+&lt;video src="movie.mp4" controls poster="preview.jpg"&gt;
+    Ваш браузер не поддерживает тег video.
+&lt;/video&gt;
+                </code></pre>
+                
+                <h3>Canvas</h3>
+                <p>Элемент <code>&lt;canvas&gt;</code> используется для рисования графики с помощью JavaScript. Это холст, который изначально пуст.</p>
+                
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+
+            <section id="glava6">
+                <h2>Глава 6. Основы CSS3</h2>
+                
+                <h3>Подключение стилей и Синтаксис</h3>
+                <p>CSS (Cascading Style Sheets) описывает внешний вид документа. Стиль можно подключить внешним файлом (<code>&lt;link&gt;</code>), внутренним блоком (<code>&lt;style&gt;</code>) или инлайн-стилем (атрибут <code>style</code>).</p>
+                <p>Синтаксис: <code>селектор { свойство: значение; }</code></p>
+                
+                <h3>Каскадность и Наследование</h3>
+                <p>*Каскадность* определяет, какой стиль применяется при конфликте (более специфичные стили переопределяют менее специфичные). *Наследование* означает, что некоторые свойства (например, <code>color</code>, <code>font</code>) автоматически передаются от родительского элемента дочерним.</p>
+                
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+
+            <section id="glava7">
+                <h2>Глава 7. Разновидности Селекторов</h2>
+                
+                <h3>Специфичность</h3>
+                <p>Специфичность — это алгоритм, который определяет, какой из конфликтующих селекторов имеет приоритет. Приоритет возрастает в порядке: тег < класс < ID < инлайн-стиль.</p>
+                
+                <h3>Псевдоклассы и Псевдоэлементы</h3>
+                <ul>
+                    <li>*Псевдоклассы* (например, <code>:hover</code>, <code>:nth-child()</code>) выбирают элементы на основе их состояния или положения.</li>
+                    <li>*Псевдоэлементы* (например, <code>::before</code>, <code>::after</code>) выбирают и стилизуют определенную часть элемента.</li>
+                </ul>
+                
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+
+            <section id="glava8">
+                <h2>Глава 8. Оформление Текста и Шрифты</h2>
+                
+                <h3>Свойства шрифтов</h3>
+                <p>Основные свойства: <code>font-family</code> (название шрифта), <code>font-size</code> (размер), <code>font-weight</code> (насыщенность), <code>font-style</code> (наклон).</p>
+                
+                <h3>Свойства текста</h3>
+                <p>Свойства текста: <code>text-align</code> (выравнивание), <code>text-decoration</code> (подчеркивание), <code>line-height</code> (высота строки) и <code>text-shadow</code> (тень).</p>
+                
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+            
+            <section id="glava9">
+                <h2>Глава 9. Блочная Модель (Box Model)</h2>
+                
+                <h3>Box Model</h3>
+                <p>Каждый элемент в HTML рассматривается браузером как прямоугольный блок, состоящий из четырех частей (снаружи внутрь):</p>
+                <ol>
+                    <li>*Margin* (внешний отступ).</li>
+                    <li>*Border* (рамка).</li>
+                    <li>*Padding* (внутренний отступ).</li>
+                    <li>*Content* (содержимое).</li>
+                </ol>
+                
+                <h3>box-sizing</h3>
+                <p>Свойство <code>box-sizing: border-box;</code> является лучшей практикой, так как оно включает <code>padding</code> и <code>border</code> в общую <code>width</code>/<code>height</code> элемента, упрощая расчеты макета.</p>
+                
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+            
+            <section id="glava10">
+                <h2>Глава 10. Позиционирование и Дисплей</h2>
+                
+                <h3>Свойство display</h3>
+                <p>Определяет, как элемент ведет себя в потоке: <code>block</code> (занимает всю ширину), <code>inline</code> (занимает только необходимую ширину), <code>inline-block</code> (можно задавать ширину/высоту, но ведет себя как строчный).</p>
+                
+                <h3>Свойство position</h3>
+                <ul>
+                    <li><code>static</code> (по умолчанию, не позиционируется).</li>
+                    <li><code>relative</code> (позиционируется относительно своего нормального положения).</li>
+                    <li><code>absolute</code> (позиционируется относительно ближайшего *позиционированного* предка).</li>
+                    <li><code>fixed</code> (фиксируется относительно окна браузера).</li>
+                    <li><code>sticky</code> (фиксируется при прокрутке).</li>
+                </ul>
+                
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+            
+            <section id="glava11">
+                <h2>Глава 11. Flexbox (Гибкие Блоки)</h2>
+                
+                <h3>Flex Container</h3>
+                <p>Flexbox — это одномерная система расположения элементов. Она активируется для родителя с помощью <code>display: flex;</code>. Это делает родителя *Flex-контейнером, а дочерние элементы — **Flex-элементами*.</p>
+                
+                <h3>Выравнивание</h3>
+                <p>Основные свойства для выравнивания:</p>
+                <ul>
+                    <li><code>justify-content</code>: выравнивание элементов вдоль главной оси (например, <code>center</code>, <code>space-between</code>).</li>
+                    <li><code>align-items</code>: выравнивание элементов вдоль поперечной оси.</li>
+                </ul>
+                
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+            
+            <section id="glava12">
+                <h2>Глава 12. CSS Grid Layout</h2>
+                
+                <h3>Grid Container</h3>
+                <p>Grid — это двумерная система расположения. Активируется с помощью <code>display: grid;</code>. Позволяет создавать сетки, используя строки и столбцы.</p>
+                
+                <h3>Определение сетки</h3>
+                <p>Свойства <code>grid-template-columns</code> и <code>grid-template-rows</code> определяют структуру сетки (например, <code>grid-template-columns: 1fr 1fr 1fr;</code> создает три равных столбца).</p>
+                
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+            
+            <section id="glava13">
+                <h2>Глава 13. Адаптивность, Трансформации и Анимации</h2>
+                
+                <h3>Адаптивный дизайн (Media Queries)</h3>
+                <p>Медиа-запросы (<code>@media</code>) позволяют применять стили только при определенных условиях, например, на определенной ширине экрана. Это основа адаптивного дизайна.</p>
+                <pre><code>
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+                </code></pre>
+                
+                <h3>Трансформации и Анимации</h3>
+                <p>Свойство <code>transform</code> (<code>translate()</code>, <code>rotate()</code>, <code>scale()</code>) позволяет изменять геометрию элемента. Анимации создаются с помощью <code>@keyframes</code> и свойства <code>animation</code>.</p>
+                
+                <a href="#toc" class="back-to-top">↑ К содержанию</a>
+            </section>
+            
+        </main>
+    </div>
+
+    <footer>
+        <p style="text-align: center; padding: 20px; background: #333; color: white;">
+            &copy; 2025 Учебный сайт по материалам Metanit.com
+        </p>
+    </footer>
+
+</body>
+</html>
